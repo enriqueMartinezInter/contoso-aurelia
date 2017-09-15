@@ -1,0 +1,46 @@
+<template>
+    <require from="toastr/build/toastr.min.css"></require>
+
+    <section>
+        <div class="container">
+            <div class="row section">
+                <div class="col-6">
+                    <a href="#" class="btn btn-primary" route-href="route: course-details">
+                        <i class="ti-plus"></i> Add Course
+                    </a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-6">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th>Course Id</th>
+                                <th>Title</th>
+                                <th>Credits</th>
+                            </tr>
+                        </thead>
+                        <tbody au-stagger>
+                            <tr au-animate repeat.for="course of courses">
+                                <td>
+                                    <a href="#" class="card-link" click.delegate="deleteCourse(course)">
+                                        <i class="ti-trash"></i>
+                                    </a>
+                                    |
+                                    <a href="#" class="card-link" click.delegate="submit()">
+                                        <i class="ti-pencil"></i>
+                                    </a>
+                                </td>    
+                                <td>${course.courseId}</td>
+                                <td>${course.title}</td>
+                                <td>${course.credits}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</template>

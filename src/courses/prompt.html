@@ -1,0 +1,12 @@
+<template>
+    <ux-dialog>
+      <ux-dialog-body>
+        <input value.bind="person.firstName" />
+      </ux-dialog-body>
+  
+      <ux-dialog-footer>
+        <button class="btn btn-primary" click.delegate="controller.cancel()">Cancel</button>
+        <button class="btn btn-primary" click.delegate="controller.ok(person)">Ok</button>
+      </ux-dialog-footer>
+    </ux-dialog>
+  </template>

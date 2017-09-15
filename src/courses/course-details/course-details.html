@@ -1,0 +1,29 @@
+<template>
+    <require from="toastr/build/toastr.min.css"></require>
+
+    <section class="au-animate">
+        <div class="row">
+            <div class="col-4">
+                <div class="card">
+                    <div class="card-block">
+                        <form>
+                            <fieldset>
+                                <div class="form-group">
+                                    <label for="title">Title</label>
+                                    <input type="text" class="form-control" value.bind="course.title" id="title">
+                                </div>
+                                <div class="form-group">
+                                    <label for="credits">Credits</label>
+                                    <input type="text" class="form-control" value.bind="course.credits" id="credits">
+                                </div>
+                                <button type="submit" class="btn btn-primary" click.delegate="save()">
+                                    <i class="ti-save"></i> Save
+                                </button>
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</template>

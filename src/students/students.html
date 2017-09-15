@@ -1,0 +1,19 @@
+<template>
+    <require from="./student-card/student-card"></require>
+    <require from="toastr/build/toastr.min.css"></require>
+
+    <section class="au-animate">
+        <div class="row section au-stagger">
+            <div class="col-6">
+                <a href="#" class="btn btn-primary" route-href="route: student-details">
+                    <i class="ti-plus"></i> Add Student
+                </a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-3" au-animate repeat.for="student of students">
+                <student-card student.bind="student"></student-card>
+            </div>
+        </div>
+    </section>
+</template>

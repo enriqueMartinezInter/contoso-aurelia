@@ -1,0 +1,38 @@
+<template>
+    <require from="toastr/build/toastr.min.css"></require>
+
+    <section class="au-animate">
+        <div class="row">
+            <div class="col-4">
+                <div class="card">
+                    <div class="card-block">
+                        <form>
+                            <fieldset>
+                                <div class="form-group">
+                                    <label for="lastName">Last Name</label>
+                                    <input type="text" class="form-control" value.bind="student.lastName" id="lastName">
+                                </div>
+                                <div class="form-group">
+                                    <label for="firstMidName">First Mid Name</label>
+                                    <input type="text" class="form-control" value.bind="student.firstMidName" id="firstMidName">
+                                </div>
+                                <div class="form-group row">
+                                    <div class="col-5">
+                                        <label for="enrollmentDate">Enrollment Date</label>
+                                        <date-picker 
+                                             value.bind="student.enrollmentDate" 
+                                            id="enrollmentDate">
+                                        </date-picker>
+                                    </div>
+                                </div>
+                                <button type="submit" class="btn btn-primary" click.delegate="save()">
+                                    <i class="ti-save"></i> Save
+                                </button>
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</template>

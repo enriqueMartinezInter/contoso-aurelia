@@ -1,0 +1,15 @@
+<template>
+    <div class="card">
+        <div class="card-block">
+            <h5 class="card-title">${course.title}</h5>
+            <h6 class="card-subtitle text-muted">${course.credits}</h6>
+        </div>
+        <div class="card-block">
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="#" class="card-link" route-href="route: course-details; params.bind: { id: course.courseId }">
+                Edit
+            </a>
+            <a href="#" class="card-link" click.delegate="deleteCourse()">Delete</a> 
+        </div>
+    </div>
+</template>

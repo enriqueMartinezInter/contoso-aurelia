@@ -1,0 +1,14 @@
+<template>
+    <require from="flatpickr/flatpickr.css"></require>
+    
+    <div class="input-group">
+        <input type="text" 
+            value.bind="value" 
+            options.bind="options"
+            class="form-control"
+            autocomplete="off">
+        <span class="input-group-addon">
+          <i class="ti-calendar"></i>
+        </span>
+    </div>
+</template>

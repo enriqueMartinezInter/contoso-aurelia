@@ -1,0 +1,39 @@
+<template>
+    <section class="au-animate">
+        <div class="row section au-stagger">
+            <div class="col-4">
+                <div class="card">
+                    <div class="card-block">
+                        <form>
+                            <fieldset>
+                                <div class="form-group">
+                                    <label>Student:</label>
+                                    <autocomplete 
+                                        service.bind="studentService" 
+                                        displayfield="fullName"
+                                        value.bind="selectedStudent"
+                                        placeholder="Enter student..."
+                                        change.delegate="changedStudent($event.detail.value)">
+                                    </autocomplete>
+                                </div>
+                                <div class="form-group">
+                                    <label>Course:</label>
+                                    <autocomplete 
+                                        service.bind="courseService" 
+                                        displayfield="title"
+                                        value.bind="selectedCourse"
+                                        placeholder="Enter course..."
+                                        change.delegate="changedCourse($event.detail.value)">
+                                    </autocomplete>
+                                </div>
+                                <button type="submit" class="btn btn-primary" click.delegate="assign()">
+                                    Assign Course <i class="ti-angle-double-right"></i>
+                                </button>
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</template>

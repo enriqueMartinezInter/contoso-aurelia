@@ -1,0 +1,14 @@
+<template>
+    <require from="./common/bootstrap.css"></require>
+    <require from="./common/themify-icons.css"></require>
+    <require from="./common/styles.css"></require>
+    <require from="./shell/nav-bar.html"></require>
+  
+    <nav-bar router.bind="router"></nav-bar>
+    <div class="container-fluid">
+      <div class="main">
+        <router-view></router-view>
+      </div>
+    </div>
+  </template>
+  
